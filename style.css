@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(50deg, rgb(6, 194, 169), rgb(44, 170, 219));
+}
+
+.hero {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(50deg, rgb(6, 194, 169), rgb(44, 170, 219));
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: moveBackground 10s infinite linear;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.calendar {
+  width: 300px;
+  height: 250px;
+  background: white;
+  border-radius: 13px;
+  border: 2px solid;
+  display: flex;
+  box-shadow: 10px 10px 20px;
+  transition: 1s;
+  font-family: cursive;
+}
+
+.calendar:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.left,
+.right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.right:hover {
+  color: rgb(2, 53, 53);
+  cursor: pointer;
+}
+
+.right {
+  width: 42%;
+  background-color: rgb(35, 204, 167);
+  border-radius: 0px 11px 11px 0px;
+  margin: 0;
+}
+
+.left {
+  width: 58%;
+}
+
+.left:hover {
+  color: rgb(64, 85, 85);
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  .hero {
+    background-image: none;
+    background-color: black;
+    background-size: 100%;
+  }
+  body {
+    background-color: black;
+  }
+
+  .left,
+  .right {
+    background-color: black;
+    color: red;
+    box-shadow: 10px 10px 20px red;
+  }
+
+  .calendar:hover {
+    box-shadow: 10px 10px 20px red;
+  }
+  .left:hover {
+    color: red;
+  }
+
+  .right:hover {
+    color: red;
+  }
+  html {
+    background-color: black;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    background-image: none;
+    background-color: black;
+    background-size: 100%;
+  }
+  body {
+    background-color: black;
+  }
+
+  .left,
+  .right {
+    background-color: black;
+    color: aqua;
+    box-shadow: 10px 10px 20px aqua;
+  }
+
+  .calendar:hover {
+    box-shadow: 10px 10px 20px aqua;
+  }
+  .left:hover {
+    color: aqua;
+  }
+
+  .right:hover {
+    color: aqua;
+  }
+}
